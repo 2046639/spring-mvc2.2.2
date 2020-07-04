@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:spring="http://www.w3.org/1999/XSL/Transform">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title th:utext="#{cars.title}"></title>
+
+    <h1 th:utext="#{cars.title}"></h1>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> Number </th>
+        <th> Model </th>
+        <th> Price </th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="car : ${carList}">
+        <td><span th:text="${car.number}"> Number </span></td>
+        <td><span th:text="${car.model}"> Model </span></td>
+        <td><span th:text="${car.price}"> Model </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
